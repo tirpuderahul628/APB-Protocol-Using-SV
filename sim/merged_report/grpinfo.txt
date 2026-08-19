@@ -1,0 +1,197 @@
+Group : apb_pkg::apb_scoreboard::apb_cov1
+
+===============================================================================
+Group : apb_pkg::apb_scoreboard::apb_cov1
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Source File(s) : 
+
+/home/dvft0907/dvft0907_apb_sv_project/env/apb_scoreboard.sv
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   apb_pkg::apb_scoreboard::apb_cov1
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 9        0         9       100.00  
+Crosses   4        0         4       100.00  
+
+
+Variables for Group  apb_pkg::apb_scoreboard::apb_cov1
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+CP1      2        0         2       100.00  100  1      1        0                    
+CP2      1        0         1       100.00  100  1      1        0                    
+CP3      1        0         1       100.00  100  1      1        0                    
+CP4      1        0         1       100.00  100  1      1        0                    
+CP5      2        0         2       100.00  100  1      1        0                    
+CP6      2        0         2       100.00  100  1      1        0                    
+
+
+Crosses for Group  apb_pkg::apb_scoreboard::apb_cov1
+
+
+CROSS     EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST PRINT MISSING COMMENT 
+CP2_X_CP5 2        0         2       100.00  100  1      1        0                     
+CP3_X_CP5 2        0         2       100.00  100  1      1        0                     
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CP1
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for CP1
+
+
+Bins
+
+NAME COUNT AT LEAST 
+b2   4     1        
+b1   45    1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CP2
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for CP2
+
+
+Bins
+
+NAME COUNT AT LEAST 
+b3   125   1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CP3
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for CP3
+
+
+Bins
+
+NAME COUNT AT LEAST 
+b4   180   1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CP4
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for CP4
+
+
+Bins
+
+NAME     COUNT AT LEAST 
+psel_one 219   1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CP5
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for CP5
+
+
+Bins
+
+NAME     COUNT AT LEAST 
+pwrite_0 109   1        
+pwrite_1 110   1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CP6
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for CP6
+
+
+Bins
+
+NAME      COUNT AT LEAST 
+pslverr_0 215   1        
+pslverr_1 4     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Cross CP2_X_CP5
+
+
+Samples crossed: CP2 CP5
+CATEGORY                           EXPECTED UNCOVERED COVERED PERCENT MISSING 
+Automatically Generated Cross Bins 2        0         2       100.00          
+
+
+Automatically Generated Cross Bins for CP2_X_CP5
+
+
+Bins
+
+CP2 CP5      COUNT AT LEAST 
+b3  pwrite_0 109   1        
+b3  pwrite_1 16    1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Cross CP3_X_CP5
+
+
+Samples crossed: CP3 CP5
+CATEGORY                           EXPECTED UNCOVERED COVERED PERCENT MISSING 
+Automatically Generated Cross Bins 2        0         2       100.00          
+
+
+Automatically Generated Cross Bins for CP3_X_CP5
+
+
+Bins
+
+CP3 CP5      COUNT AT LEAST 
+b4  pwrite_0 70    1        
+b4  pwrite_1 110   1        
+
+

@@ -1,0 +1,274 @@
+
+Error-[VERDI_VCS_MM] Possible VERDI_HOME and VCS_HOME mismatch
+  The Verdi tab and pli.a cannot be added to the 'vcs' compile command because
+  the file '/pli.a' could not be found.
+  Please check to make sure VERDI_HOME and VCS_HOME point to installations 
+  that are either both 32-bits or both 64-bits.
+
+Command: vcs -R -full64 -sverilog -kdb -debug_access+all +ntb_random_seed_automatic \
+-override_timescale=1ps/1ps ../rtl/apb_slave_design.sv ../env/apb_interface.sv ../test/apb_pkg.sv \
+../top/apb_top.sv +incdir+../test/ +incdir+../env/ +incdir+../top/ -cm_dir apb_reset_test_coverage.vdb \
++apb_reset_test -l apb_reset_test.log
+                         Chronologic VCS (TM)
+         Version T-2022.06_Full64 -- Mon Nov  3 22:30:29 2025
+
+                    Copyright (c) 1991 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '../rtl/apb_slave_design.sv'
+Parsing design file '../env/apb_interface.sv'
+Parsing design file '../test/apb_pkg.sv'
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/env/apb_transaction.sv'.
+Back to file '../test/apb_pkg.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/env/apb_generator.sv'.
+Back to file '../test/apb_pkg.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/env/apb_driver.sv'.
+Back to file '../test/apb_pkg.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/env/apb_monitor.sv'.
+Back to file '../test/apb_pkg.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/env/apb_predictor.sv'.
+Back to file '../test/apb_pkg.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/env/apb_scoreboard.sv'.
+Back to file '../test/apb_pkg.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/env/apb_enviroment.sv'.
+Back to file '../test/apb_pkg.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_write_read_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_write_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_read_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_slverr_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_reset_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_write_read_zerowait_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_write_zerowait_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_read_zerowait_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_slverr_zerowait_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_reset_zerowait_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Back to file '../test/apb_pkg.sv'.
+Parsing design file '../top/apb_top.sv'
+Top Level Modules:
+       apb_top
+TimeScale is 1 ps / 1 ps
+Notice: Ports coerced to inout, use -notice for details
+Starting vcs inline pass...
+
+3 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory `/home/dvft0907/dvft0907_apb_sv_project/sim/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -shared  -Bsymbolic   -o .//../simv.daidir//_cuarc0.so objs/amcQw_d.o 
+rm -f _cuarc0.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/home/tools/synopsys/vcs_2022/T-2022.06/linux64/lib -L/home/tools/synopsys/vcs_2022/T-2022.06/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1     _21955_archive_1.so _prev_archive_1.so \
+_cuarc0.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o \
+rmar_llvm_0_0.o           -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile \
+-luclinative /home/tools/synopsys/vcs_2022/T-2022.06/linux64/lib/vcs_tls.o   -Wl,-whole-archive \
+-lvcsucli    -Wl,-no-whole-archive          /home/tools/synopsys/vcs_2022/T-2022.06/linux64/lib/vcs_save_restore_new.o \
+-ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/dvft0907/dvft0907_apb_sv_project/sim/csrc'
+Command: /home/dvft0907/dvft0907_apb_sv_project/sim/./simv +ntb_random_seed_automatic -cm_runsilent -cm_dir apb_reset_test_coverage.vdb +apb_reset_test -a apb_reset_test.log +incdir+../test/ +incdir+../env/ +incdir+../top/
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Nov  3 22:30 2025
+NOTE: automatic random seed used: 2434513692
+time=0 inside APB_RESET_TEST
+*************************************************
+[GEN] : [20] paddr: be | pwdata: ef67ef67 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [45] paddr: be | pwdata: ef67ef67 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [55] paddr: be | pwdata: ef67ef67 | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [55] paddr: be | pwdata: ef67ef67 | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+*************************************************
+[GEN] : [56] paddr: f5 | pwdata: acafacaf | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [75] paddr: be | pwdata: ef67ef67 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [95] paddr: be | pwdata: ef67ef67 | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [95] paddr: be | pwdata: ef67ef67 | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [115] paddr: f5 | pwdata: acafacaf | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [155] paddr: f5 | pwdata: acafacaf | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [155] paddr: f5 | pwdata: acafacaf | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+*************************************************
+[GEN] : [156] paddr: af | pwdata: acadacad | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [175] paddr: f5 | pwdata: acafacaf | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [185] paddr: f5 | pwdata: acafacaf | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [185] paddr: f5 | pwdata: acafacaf | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [205] paddr: af | pwdata: acadacad | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [255] paddr: af | pwdata: acadacad | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*************************************************
+[GEN] : [255] paddr: 55 | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[PRE] : [255] paddr: af | pwdata: acadacad | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [275] paddr: af | pwdata: acadacad | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [305] paddr: 55 | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [325] paddr: 55 | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [325] paddr: 55 | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+*************************************************
+[GEN] : [326] paddr: be | pwdata: acadacad | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [345] paddr: 55 | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [385] paddr: 55 | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [385] paddr: 55 | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [405] paddr: be | pwdata: acadacad | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [445] paddr: be | pwdata: acadacad | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [445] paddr: be | pwdata: acadacad | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+*************************************************
+[GEN] : [446] paddr: 55 | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [465] paddr: be | pwdata: acadacad | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [485] paddr: be | pwdata: acadacad | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [485] paddr: be | pwdata: acadacad | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [505] paddr: 55 | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [535] paddr: 55 | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [535] paddr: 55 | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+*************************************************
+[GEN] : [536] paddr: fc | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [555] paddr: 55 | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [605] paddr: 55 | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [605] paddr: 55 | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [625] paddr: fc | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [655] paddr: fc | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [665] paddr: fc | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [665] paddr: fc | pwdata: a5a5a5a5 | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+*************************************************
+[GEN] : [666] paddr: 5c | pwdata: ffffffff | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [695] paddr: 5c | pwdata: ffffffff | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [745] paddr: 5c | pwdata: ffffffff | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [745] paddr: 5c | pwdata: ffffffff | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+*************************************************
+[GEN] : [746] paddr: fc | pwdata: 54 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [765] paddr: 5c | pwdata: ffffffff | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [775] paddr: 5c | pwdata: ffffffff | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [775] paddr: 5c | pwdata: ffffffff | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [795] paddr: fc | pwdata: 54 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [795] paddr: f5 | pwdata: abcdefab | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [805] paddr: fc | pwdata: 54 | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [805] paddr: fc | pwdata: 54 | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [825] paddr: fc | pwdata: 54 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [855] paddr: fc | pwdata: 54 | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [855] paddr: fc | pwdata: 54 | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [875] paddr: f5 | pwdata: abcdefab | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [905] paddr: f5 | pwdata: abcdefab | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [905] paddr: f5 | pwdata: abcdefab | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+*************************************************
+[GEN] : [906] paddr: fc | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [925] paddr: f5 | pwdata: abcdefab | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [945] paddr: f5 | pwdata: abcdefab | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [945] paddr: f5 | pwdata: abcdefab | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [965] paddr: fc | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [975] paddr: fc | pwdata: 0 | prdata: 54 | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [975] paddr: fc | pwdata: 0 | prdata: 54 | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =975, PASS=PRDATA mon=54<=>54=pre
+*************************************************
+[GEN] : [976] paddr: 55 | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [995] paddr: fc | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1025] paddr: fc | pwdata: 0 | prdata: 54 | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [1025] paddr: fc | pwdata: 0 | prdata: 54 | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1025, PASS=PRDATA mon=54<=>54=pre
+[DRI] : [1045] paddr: 55 | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1055] paddr: 55 | pwdata: 0 | prdata: a5a5a5a5 | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [1055] paddr: 55 | pwdata: 0 | prdata: a5a5a5a5 | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1055, PASS=PRDATA mon=a5a5a5a5<=>a5a5a5a5=pre
+*************************************************
+[GEN] : [1056] paddr: 5c | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [1075] paddr: 55 | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1105] paddr: 55 | pwdata: 0 | prdata: a5a5a5a5 | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [1105] paddr: 55 | pwdata: 0 | prdata: a5a5a5a5 | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1105, PASS=PRDATA mon=a5a5a5a5<=>a5a5a5a5=pre
+[DRI] : [1125] paddr: 5c | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1155] paddr: 5c | pwdata: 0 | prdata: ffffffff | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [1155] paddr: 5c | pwdata: 0 | prdata: ffffffff | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1155, PASS=PRDATA mon=ffffffff<=>ffffffff=pre
+*************************************************
+[GEN] : [1156] paddr: ab | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [1175] paddr: 5c | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1225] paddr: 5c | pwdata: 0 | prdata: ffffffff | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [1225] paddr: 5c | pwdata: 0 | prdata: ffffffff | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1225, PASS=PRDATA mon=ffffffff<=>ffffffff=pre
+[DRI] : [1245] paddr: ab | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1295] paddr: ab | pwdata: 0 | prdata: ab | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [1295] paddr: ab | pwdata: 0 | prdata: ab | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1295, PASS=PRDATA mon=ab<=>ab=pre
+*************************************************
+[GEN] : [1296] paddr: 5c | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [1315] paddr: ab | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [1345] paddr: 5c | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1355] paddr: 5c | pwdata: 0 | prdata: ffffffff | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [1355] paddr: 5c | pwdata: 0 | prdata: ffffffff | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1355, PASS=PRDATA mon=ffffffff<=>ffffffff=pre
+*************************************************
+[GEN] : [1356] paddr: ab | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [1375] paddr: 5c | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [1405] paddr: ab | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1415] paddr: ab | pwdata: 0 | prdata: ab | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [1415] paddr: ab | pwdata: 0 | prdata: ab | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1415, PASS=PRDATA mon=ab<=>ab=pre
+*************************************************
+[GEN] : [1416] paddr: 55 | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [1435] paddr: ab | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1475] paddr: ab | pwdata: 0 | prdata: ab | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [1475] paddr: ab | pwdata: 0 | prdata: ab | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1475, PASS=PRDATA mon=ab<=>ab=pre
+[DRI] : [1495] paddr: 55 | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1505] paddr: 55 | pwdata: 0 | prdata: a5a5a5a5 | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [1505] paddr: 55 | pwdata: 0 | prdata: a5a5a5a5 | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1505, PASS=PRDATA mon=a5a5a5a5<=>a5a5a5a5=pre
+*************************************************
+[GEN] : [1506] paddr: ff | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [1525] paddr: 55 | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1575] paddr: 55 | pwdata: 0 | prdata: a5a5a5a5 | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [1575] paddr: 55 | pwdata: 0 | prdata: a5a5a5a5 | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1575, PASS=PRDATA mon=a5a5a5a5<=>a5a5a5a5=pre
+[DRI] : [1595] paddr: ff | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1625] paddr: ff | pwdata: 0 | prdata: ff | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [1625] paddr: ff | pwdata: 0 | prdata: ff | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1625, PASS=PRDATA mon=ff<=>ff=pre
+*************************************************
+[GEN] : [1626] paddr: fc | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [1645] paddr: ff | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1685] paddr: ff | pwdata: 0 | prdata: ff | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [1685] paddr: ff | pwdata: 0 | prdata: ff | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1685, PASS=PRDATA mon=ff<=>ff=pre
+[DRI] : [1705] paddr: fc | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1715] paddr: fc | pwdata: 0 | prdata: 54 | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [1715] paddr: fc | pwdata: 0 | prdata: 54 | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1715, PASS=PRDATA mon=54<=>54=pre
+*************************************************
+[GEN] : [1716] paddr: cc | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [1735] paddr: fc | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1755] paddr: fc | pwdata: 0 | prdata: 54 | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [1755] paddr: fc | pwdata: 0 | prdata: 54 | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1755, PASS=PRDATA mon=54<=>54=pre
+[DRI] : [1775] paddr: cc | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1785] paddr: cc | pwdata: 0 | prdata: cc | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+[PRE] : [1785] paddr: cc | pwdata: 0 | prdata: cc | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1785, PASS=PRDATA mon=cc<=>cc=pre
+[DRI] : [1805] paddr: cc | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+$finish called from file "../top/apb_top.sv", line 22.
+$finish at simulation time                 1820
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1820 ps
+CPU Time:      0.590 seconds;       Data structure size:   0.1Mb
+Mon Nov  3 22:30:31 2025
+CPU time: .997 seconds to compile + .576 seconds to elab + .312 seconds to link + .629 seconds in simulation
+Verdi KDB elaboration done and the database successfully generated: 0 error(s), 0 warning(s)

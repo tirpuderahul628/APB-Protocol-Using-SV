@@ -1,0 +1,327 @@
+
+Error-[VERDI_VCS_MM] Possible VERDI_HOME and VCS_HOME mismatch
+  The Verdi tab and pli.a cannot be added to the 'vcs' compile command because
+  the file '/pli.a' could not be found.
+  Please check to make sure VERDI_HOME and VCS_HOME point to installations 
+  that are either both 32-bits or both 64-bits.
+
+Command: vcs -R -full64 -sverilog -kdb -debug_access+all +ntb_random_seed_automatic \
+-override_timescale=1ps/1ps ../rtl/apb_slave_design.sv ../env/apb_interface.sv ../test/apb_pkg.sv \
+../top/apb_top.sv +incdir+../test/ +incdir+../env/ +incdir+../top/ -cm_dir apb_reset_zerowait_test_coverage.vdb \
++apb_reset_zerowait_test +zerowaitstate -l apb_reset_zerowait_test.log
+                         Chronologic VCS (TM)
+         Version T-2022.06_Full64 -- Mon Nov  3 22:30:51 2025
+
+                    Copyright (c) 1991 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '../rtl/apb_slave_design.sv'
+Parsing design file '../env/apb_interface.sv'
+Parsing design file '../test/apb_pkg.sv'
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/env/apb_transaction.sv'.
+Back to file '../test/apb_pkg.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/env/apb_generator.sv'.
+Back to file '../test/apb_pkg.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/env/apb_driver.sv'.
+Back to file '../test/apb_pkg.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/env/apb_monitor.sv'.
+Back to file '../test/apb_pkg.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/env/apb_predictor.sv'.
+Back to file '../test/apb_pkg.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/env/apb_scoreboard.sv'.
+Back to file '../test/apb_pkg.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/env/apb_enviroment.sv'.
+Back to file '../test/apb_pkg.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_write_read_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_write_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_read_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_slverr_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_reset_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_write_read_zerowait_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_write_zerowait_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_read_zerowait_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_slverr_zerowait_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Parsing included file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_reset_zerowait_test.sv'.
+Back to file '/home/dvft0907/dvft0907_apb_sv_project/test/apb_test.sv'.
+Back to file '../test/apb_pkg.sv'.
+Parsing design file '../top/apb_top.sv'
+Top Level Modules:
+       apb_top
+TimeScale is 1 ps / 1 ps
+Notice: Ports coerced to inout, use -notice for details
+Starting vcs inline pass...
+
+3 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory `/home/dvft0907/dvft0907_apb_sv_project/sim/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -shared  -Bsymbolic   -o .//../simv.daidir//_cuarc0.so objs/amcQw_d.o 
+rm -f _cuarc0.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/home/tools/synopsys/vcs_2022/T-2022.06/linux64/lib -L/home/tools/synopsys/vcs_2022/T-2022.06/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1     _28637_archive_1.so _prev_archive_1.so \
+_cuarc0.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o \
+rmar_llvm_0_0.o           -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile \
+-luclinative /home/tools/synopsys/vcs_2022/T-2022.06/linux64/lib/vcs_tls.o   -Wl,-whole-archive \
+-lvcsucli    -Wl,-no-whole-archive          /home/tools/synopsys/vcs_2022/T-2022.06/linux64/lib/vcs_save_restore_new.o \
+-ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/dvft0907/dvft0907_apb_sv_project/sim/csrc'
+Command: /home/dvft0907/dvft0907_apb_sv_project/sim/./simv +ntb_random_seed_automatic -cm_runsilent -cm_dir apb_reset_zerowait_test_coverage.vdb +apb_reset_zerowait_test +zerowaitstate -a apb_reset_zerowait_test.log +incdir+../test/ +incdir+../env/ +incdir+../top/
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Nov  3 22:30 2025
+NOTE: automatic random seed used: 3491490608
+time=0 inside APB_RESET_ZEROWAIT_TEST
+*************************************************
+[GEN] : [20] paddr: fa | pwdata: ffffffff | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [45] paddr: fa | pwdata: ffffffff | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [55] paddr: fa | pwdata: ffffffff | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [55] paddr: fa | pwdata: ffffffff | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+*************************************************
+[GEN] : [56] paddr: fa | pwdata: 5a5a5a5a | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[DRI] : [75] paddr: fa | pwdata: ffffffff | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [85] paddr: fa | pwdata: ffffffff | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [85] paddr: fa | pwdata: ffffffff | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [105] paddr: fa | pwdata: 5a5a5a5a | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [105] paddr: af | pwdata: aaaaaaaa | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [115] paddr: fa | pwdata: 5a5a5a5a | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [115] paddr: fa | pwdata: 5a5a5a5a | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [135] paddr: fa | pwdata: 5a5a5a5a | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [145] paddr: fa | pwdata: 5a5a5a5a | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [145] paddr: fa | pwdata: 5a5a5a5a | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [165] paddr: af | pwdata: aaaaaaaa | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [165] paddr: fa | pwdata: ef67ef67 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [175] paddr: af | pwdata: aaaaaaaa | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [175] paddr: af | pwdata: aaaaaaaa | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [195] paddr: af | pwdata: aaaaaaaa | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [205] paddr: af | pwdata: aaaaaaaa | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [205] paddr: af | pwdata: aaaaaaaa | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [225] paddr: fa | pwdata: ef67ef67 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [225] paddr: af | pwdata: 53535353 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [235] paddr: fa | pwdata: ef67ef67 | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [235] paddr: fa | pwdata: ef67ef67 | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [255] paddr: fa | pwdata: ef67ef67 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [265] paddr: fa | pwdata: ef67ef67 | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [265] paddr: fa | pwdata: ef67ef67 | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [285] paddr: af | pwdata: 53535353 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [285] paddr: ab | pwdata: cc34dd5a | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [295] paddr: af | pwdata: 53535353 | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [295] paddr: af | pwdata: 53535353 | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [315] paddr: af | pwdata: 53535353 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [325] paddr: af | pwdata: 53535353 | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [325] paddr: af | pwdata: 53535353 | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [345] paddr: ab | pwdata: cc34dd5a | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [345] paddr: cd | pwdata: 5a5a5a5a | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [355] paddr: ab | pwdata: cc34dd5a | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [355] paddr: ab | pwdata: cc34dd5a | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [375] paddr: ab | pwdata: cc34dd5a | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [385] paddr: ab | pwdata: cc34dd5a | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [385] paddr: ab | pwdata: cc34dd5a | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [405] paddr: cd | pwdata: 5a5a5a5a | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [405] paddr: fc | pwdata: abababab | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [415] paddr: cd | pwdata: 5a5a5a5a | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [415] paddr: cd | pwdata: 5a5a5a5a | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [435] paddr: cd | pwdata: 5a5a5a5a | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [445] paddr: cd | pwdata: 5a5a5a5a | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [445] paddr: cd | pwdata: 5a5a5a5a | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [465] paddr: fc | pwdata: abababab | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [465] paddr: f5 | pwdata: 50 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [475] paddr: fc | pwdata: abababab | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [475] paddr: fc | pwdata: abababab | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [495] paddr: fc | pwdata: abababab | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [505] paddr: fc | pwdata: abababab | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [505] paddr: fc | pwdata: abababab | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [525] paddr: f5 | pwdata: 50 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [525] paddr: 55 | pwdata: abcdefab | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [535] paddr: f5 | pwdata: 50 | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [535] paddr: f5 | pwdata: 50 | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [555] paddr: f5 | pwdata: 50 | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [565] paddr: f5 | pwdata: 50 | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [565] paddr: f5 | pwdata: 50 | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [585] paddr: 55 | pwdata: abcdefab | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [585] paddr: 55 | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [595] paddr: 55 | pwdata: abcdefab | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [595] paddr: 55 | pwdata: abcdefab | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [615] paddr: 55 | pwdata: abcdefab | prdata: 0 | pwrite : 1 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [625] paddr: 55 | pwdata: abcdefab | prdata: 0 | pwrite : 1 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [625] paddr: 55 | pwdata: abcdefab | prdata: 0 | pwrite : 1 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[DRI] : [645] paddr: 55 | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [645] paddr: fc | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [655] paddr: 55 | pwdata: 0 | prdata: abcdefab | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [655] paddr: 55 | pwdata: 0 | prdata: abcdefab | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =655, PASS=PRDATA mon=abcdefab<=>abcdefab=pre
+[DRI] : [675] paddr: 55 | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [685] paddr: 55 | pwdata: 0 | prdata: abcdefab | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [685] paddr: 55 | pwdata: 0 | prdata: abcdefab | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =685, PASS=PRDATA mon=abcdefab<=>abcdefab=pre
+[DRI] : [705] paddr: fc | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [705] paddr: 55 | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [715] paddr: fc | pwdata: 0 | prdata: abababab | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [715] paddr: fc | pwdata: 0 | prdata: abababab | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =715, PASS=PRDATA mon=abababab<=>abababab=pre
+[DRI] : [735] paddr: fc | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [745] paddr: fc | pwdata: 0 | prdata: abababab | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [745] paddr: fc | pwdata: 0 | prdata: abababab | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =745, PASS=PRDATA mon=abababab<=>abababab=pre
+[DRI] : [765] paddr: 55 | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [765] paddr: fc | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [775] paddr: 55 | pwdata: 0 | prdata: abcdefab | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [775] paddr: 55 | pwdata: 0 | prdata: abcdefab | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =775, PASS=PRDATA mon=abcdefab<=>abcdefab=pre
+[DRI] : [795] paddr: 55 | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [805] paddr: 55 | pwdata: 0 | prdata: abcdefab | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [805] paddr: 55 | pwdata: 0 | prdata: abcdefab | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =805, PASS=PRDATA mon=abcdefab<=>abcdefab=pre
+[DRI] : [825] paddr: fc | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [825] paddr: fa | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [835] paddr: fc | pwdata: 0 | prdata: abababab | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [835] paddr: fc | pwdata: 0 | prdata: abababab | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =835, PASS=PRDATA mon=abababab<=>abababab=pre
+[DRI] : [855] paddr: fc | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [865] paddr: fc | pwdata: 0 | prdata: abababab | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [865] paddr: fc | pwdata: 0 | prdata: abababab | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =865, PASS=PRDATA mon=abababab<=>abababab=pre
+[DRI] : [885] paddr: fa | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [885] paddr: af | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [895] paddr: fa | pwdata: 0 | prdata: ef67ef67 | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [895] paddr: fa | pwdata: 0 | prdata: ef67ef67 | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =895, PASS=PRDATA mon=ef67ef67<=>ef67ef67=pre
+[DRI] : [915] paddr: fa | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [925] paddr: fa | pwdata: 0 | prdata: ef67ef67 | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [925] paddr: fa | pwdata: 0 | prdata: ef67ef67 | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =925, PASS=PRDATA mon=ef67ef67<=>ef67ef67=pre
+[DRI] : [945] paddr: af | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [945] paddr: be | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [955] paddr: af | pwdata: 0 | prdata: 53535353 | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [955] paddr: af | pwdata: 0 | prdata: 53535353 | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =955, PASS=PRDATA mon=53535353<=>53535353=pre
+[DRI] : [975] paddr: af | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [985] paddr: af | pwdata: 0 | prdata: 53535353 | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [985] paddr: af | pwdata: 0 | prdata: 53535353 | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =985, PASS=PRDATA mon=53535353<=>53535353=pre
+[DRI] : [1005] paddr: be | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [1005] paddr: cd | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1015] paddr: be | pwdata: 0 | prdata: be | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [1015] paddr: be | pwdata: 0 | prdata: be | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1015, PASS=PRDATA mon=be<=>be=pre
+[DRI] : [1035] paddr: be | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1045] paddr: be | pwdata: 0 | prdata: be | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [1045] paddr: be | pwdata: 0 | prdata: be | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1045, PASS=PRDATA mon=be<=>be=pre
+[DRI] : [1065] paddr: cd | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [1065] paddr: 5c | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1075] paddr: cd | pwdata: 0 | prdata: 5a5a5a5a | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [1075] paddr: cd | pwdata: 0 | prdata: 5a5a5a5a | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1075, PASS=PRDATA mon=5a5a5a5a<=>5a5a5a5a=pre
+[DRI] : [1095] paddr: cd | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1105] paddr: cd | pwdata: 0 | prdata: 5a5a5a5a | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [1105] paddr: cd | pwdata: 0 | prdata: 5a5a5a5a | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1105, PASS=PRDATA mon=5a5a5a5a<=>5a5a5a5a=pre
+[DRI] : [1125] paddr: 5c | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+*************************************************
+[GEN] : [1125] paddr: cd | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1135] paddr: 5c | pwdata: 0 | prdata: 5c | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [1135] paddr: 5c | pwdata: 0 | prdata: 5c | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1135, PASS=PRDATA mon=5c<=>5c=pre
+[DRI] : [1155] paddr: 5c | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1165] paddr: 5c | pwdata: 0 | prdata: 5c | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [1165] paddr: 5c | pwdata: 0 | prdata: 5c | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1165, PASS=PRDATA mon=5c<=>5c=pre
+[DRI] : [1185] paddr: cd | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1195] paddr: cd | pwdata: 0 | prdata: 5a5a5a5a | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [1195] paddr: cd | pwdata: 0 | prdata: 5a5a5a5a | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1195, PASS=PRDATA mon=5a5a5a5a<=>5a5a5a5a=pre
+[DRI] : [1215] paddr: cd | pwdata: 0 | prdata: 0 | pwrite : 0 | psel: 0 | penable :0 | pready: 0 | pslverr: 0
+[MON] : [1225] paddr: cd | pwdata: 0 | prdata: 5a5a5a5a | pwrite : 0 | psel: 1 | penable :1 | pready: 1 | pslverr: 0
+*****************************************************************************************************************
+[PRE] : [1225] paddr: cd | pwdata: 0 | prdata: 5a5a5a5a | pwrite : 0 | psel: 1 | penable :0 | pready: 1 | pslverr: 0
+[SCO] TIME =1225, PASS=PRDATA mon=5a5a5a5a<=>5a5a5a5a=pre
+$finish called from file "../top/apb_top.sv", line 22.
+$finish at simulation time                 1820
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1820 ps
+CPU Time:      0.590 seconds;       Data structure size:   0.0Mb
+Mon Nov  3 22:30:53 2025
+CPU time: 1.002 seconds to compile + .599 seconds to elab + .322 seconds to link + .633 seconds in simulation
+Verdi KDB elaboration done and the database successfully generated: 0 error(s), 0 warning(s)

@@ -1,0 +1,21 @@
+Tests
+
+Total Coverage Summary 
+SCORE  GROUP  
+100.00 100.00 
+
+
+Total tests in report: 10
+-------------------------------------------------------------------------------
+Data from the following tests was used to generate this report
+apb_write_read_test_coverage/test          
+apb_write_test_coverage/test               
+apb_read_test_coverage/test                
+apb_slverr_test_coverage/test              
+apb_reset_test_coverage/test               
+apb_write_read_zerowait_test_coverage/test 
+apb_write_zerowait_test_coverage/test      
+apb_read_zerowait_test_coverage/test       
+apb_slverr_zerowait_test_coverage/test     
+apb_reset_zerowait_test_coverage/test      
+
