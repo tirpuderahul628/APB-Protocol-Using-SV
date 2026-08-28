@@ -27,8 +27,8 @@ All 10 test cases executed with **0 Verification Errors / 0 Mismatches**:
 
 ```plaintext
 APB-Protocol-Using-SV/
-├── env/     # Class components (generator, driver, monitor, scoreboard, env)
+├── env/     # Class components (generator, driver, monitor, scoreboard, env and interface)
 ├── rtl/     # APB Slave DUT / RTL source files
 ├── sim/     # Simulation scripts, filelists, and log files
 ├── test/    # SystemVerilog test library (standard & zero-wait tests)
-└── top/     # Top module and APB SystemVerilog interface
+└── top/     # Top module
